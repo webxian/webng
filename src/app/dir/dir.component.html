@@ -1,0 +1,16 @@
+<input type="text" [(ngModel)]="name">
+<ul [ngSwitch]="name">
+  <li *ngSwitchCase="'zhangsan'">张三</li>
+  <li *ngSwitchCase="'lisi'">李四</li>
+  <li *ngSwitchCase="'wangwu'">王五</li>
+  <li *ngSwitchCaseDefault>未知</li>
+</ul>
+
+<ul>
+  <li *ngFor=" let item of addrs ; index as i ; first as isFirst ; last as isLast ; even as isEven ; odd as isOdd"
+  [class.fx40]="isFirst || isLast"
+  >
+    第{{i}}个城市是：{{item}}--{{isFirst}}--{{isLast}}--{{isEven}}--{{isOdd}}
+  </li>
+
+</ul>
